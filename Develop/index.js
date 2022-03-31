@@ -11,16 +11,26 @@ const generateMarkdown = require('./utils/generateMarkdown'); //access to markdo
 const questions = [
 
     //project title
+    {
+        type: "input",
+        name: "projectName",
+        message: "What is the title of your project?"
+    },
 
     // description of the project
+    {},
 
     // how to installl project
+    {},
 
     // how to use the project
+    {},
 
     // licenses available
+    {},
 
     // developer credits
+    {},
 
     //lists tests of project
 
@@ -28,15 +38,11 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeFile(fileName, data) {
 
     fs.writeFile(fileName, data, (err) => {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Creation of your README was a success!");
+        err ? console.log(err) : console.log("Creation of your README was a success!");
     });
-
 };
 
 // TODO: Create a function to initialize app
@@ -44,7 +50,7 @@ function init() {
     inquirer.prompt(questions)
         .then(function(input) {
             console.log(input)
-            writeToFile("README.md", generateMarkdown(input));
+            writeFile("README.md", generateMarkdown(input));
         });
 };
 
