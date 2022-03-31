@@ -13,7 +13,7 @@ const questions = [
     //project title
     {
         type: "input",
-        name: "projectName",
+        name: "title",
         message: "What is the title of your project?",
         validate: input => {
             if (input) {
@@ -73,13 +73,13 @@ const questions = [
     // contributions
     {
         type: "input",
-        name: "credit",
-        message: "Honorable mentions to those who contributed to the project?",
+        name: "contr",
+        message: "How can others contribute?",
         validate: input => {
             if (input) {
                 return true;
             } else {
-                console.log("Please tell us who contributed to the project.");
+                console.log("Please tell us how to contribute to the project.");
                 return false;
             }
         }
