@@ -2,6 +2,8 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
 
+
+
 }
 
 // TODO: Create a function that returns the license link
@@ -16,26 +18,46 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
     return `# ${data.title}
 
-    ## License
+## License
 
-    ## Badges
+    Licensed under ${data.license}
 
-    ## Table of Contents:
+## Badges
 
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](#credits)
-    - [License](#license)
+[![license](https://img.shields.io/badge/License-${data.license}-red.svg)](https://img.shields.io)
 
-    ## Description:
 
-    ## Installation
+## Table of Contents:
 
-    ## Usage
+-   [Description](#description)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Contribute](#contribute)
+-   [License](#license)
 
-    ## How to Contribute
+## Description:
+${data.description}
 
-    ## Tests
+## Installation
+${data.install}
+
+## Usage
+${data.usage}
+
+## Contribute
+${data.contr}
+
+## Questions
+
+https://github.com/${data.userName}/
+
+You can reach at:
+
+Email: ${data.email}
+
+
+## Tests
+${data.test}
 
     
 
